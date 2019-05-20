@@ -1,0 +1,45 @@
+## database notes ##
+
+createdb :
+dropdb :
+
+VARCHAR: string
+INT : integer
+BOOLEAN : boolean
+
+DROP TABLE: deletes table in database
+
+## don't forget semicolons at end of command/line ##
+
+
+psql -d star_wars -f star_wars.sql  
+#     ^ DB name   ^filepath
+
+
+INSERT INTO characters (name, age, darkside) VALUES ('Obi-Wan', 27, false);
+# ^ command to insert    ^ columns in table   ^ commands    ^details of object
+
+SELECT * FROM characters;
+#  ^^ this line shows the contents of the table in terminal
+
+SELECT name * FROM characters;
+#       ^ will just return names
+
+SELECT COUNT (* ) FROM characters
+#          ^ will return number of items in table
+
+
+UPDATE characters SET darkside = true WHERE name = 'Anakin';
+#              ^ this line will update the data WHEREever you set the target
+
+
+
+## ONE 2 ONE ##
+characters > lightsabers
+
+
+## ONE 2 MANY ##
+Instructor > different classes
+
+## MANY 2 MANY ##
+Students = Classes
